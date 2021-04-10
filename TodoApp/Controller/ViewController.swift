@@ -25,6 +25,7 @@ class ViewController: UIViewController {
             
             UserDefaults.standard.setValue(textField.text, forKey: "comment")
             UserDefaults.standard.setValue(formatter.string(from: date.date), forKey: "date")
+            navigationController?.popViewController(animated: true)
         }
     }
 }
