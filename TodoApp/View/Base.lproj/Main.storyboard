@@ -138,6 +138,7 @@
                         <outlet property="addButton" destination="2ex-wR-CDu" id="jfv-e9-kfx"/>
                         <outlet property="tableView" destination="GK8-H3-fIG" id="65G-PV-ymS"/>
                         <segue destination="BYZ-38-t0r" kind="show" id="CzA-mY-QZT"/>
+                        <segue destination="Jr0-jw-Eyi" kind="show" id="vED-Sx-COf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3z-VL-GHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -195,11 +196,19 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="Jr0-jw-Eyi" eventType="touchUpInside" id="Mck-Bb-lQt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Thp-p9-pEe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="o8Y-gH-rwZ"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="8Ku-Pm-MZf" id="HwN-or-ogZ"/>
+                        <outlet property="todoLabel" destination="oTY-6h-uoz" id="7hX-XM-DTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHZ-Tp-ws6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

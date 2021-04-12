@@ -90,6 +90,13 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let checkVC = self.storyboard?.instantiateViewController(withIdentifier: "checkVC") as! CheckViewController
+        checkVC.dateString = dateList[indexPath.row]
+        checkVC.todoString = commentList[indexPath.row]
+        self.navigationController?.pushViewController(checkVC, animated: true)
+    }
+    
     @IBAction func add(_ sender: Any) {
         
         let registVC = self.storyboard?.instantiateViewController(withIdentifier: "registVC") as! ViewController
