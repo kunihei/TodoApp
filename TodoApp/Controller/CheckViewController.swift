@@ -8,14 +8,23 @@
 import UIKit
 
 class CheckViewController: UIViewController {
-
+    
+    var todoString = String()
+    var dateString = String()
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var todoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
