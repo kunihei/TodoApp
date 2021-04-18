@@ -13,7 +13,7 @@ class CheckViewController: UIViewController {
     var dateString = String()
     
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var todoTextField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,12 @@ class CheckViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        todoTextField.isEditable = false
+        
+        dateLabel.text = dateString
+        todoTextField.text = todoString
     }
     
     /*
